@@ -55,5 +55,4 @@ For each project featured in the portfolio, the following information should be 
 - Ensure legible font sizes and comfortable color combinations.
 - Consider incorporating animations and React component libraries to showcase your skills.
 
-## Contact
-For inquiries or feedback, please contact [Your Name] at [your.email@example.com].
+
