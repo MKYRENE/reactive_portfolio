@@ -5,7 +5,7 @@
 ## Description
 Being a web developer means being part of a community. You'll need a place to share your projects not only if you're applying for jobs or working as a freelancer but also so that you can share your work with fellow developers and collaborate on future projects.
 
-This project aims to help you create a portfolio using React, showcasing your skills and projects in an interactive and modern way. The portfolio includes sections such as About Me, Portfolio, Contact, and Resume.
+This project aims to help you create a portfolio using React, showcasing your skills and projects in an interactive and modern way. The portfolio includes sections such as About Me, Portfolio, Contact and Resume.
 
 ## Table of Contents
 - [User Story](#user-story)
