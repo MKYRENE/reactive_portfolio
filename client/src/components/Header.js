@@ -12,6 +12,9 @@ function Header(propsObj) {
       case 'Contact':
         propsObj.setPage('contact');
         break;
+        case 'Portfolio':
+        propsObj.setPage('portfolio');
+        break;
       default:
         propsObj.setPage('Main');
     }
@@ -22,7 +25,7 @@ function Header(propsObj) {
       <h3>Logo</h3>
       <nav>
         <a onClick={changePage} className={propsObj.page === 'Main' ? 'active' : ''} href="/">Home</a>
-        <a onClick={changePage} className={propsObj.page === 'contact' ? 'active' : ''} href="/portfolio">Portfolio</a>
+        <a onClick={changePage} className={propsObj.page === 'portfolio' ? 'active' : ''} href="/portfolio">Portfolio</a>
         <a onClick={changePage} className={propsObj.page === 'about' ? 'active' : ''} href="/about">About</a>
         <a onClick={changePage} className={propsObj.page === 'contact' ? 'active' : ''} href="/contact">Contact</a>
 

@@ -16,14 +16,14 @@ function App() {
   const handlePageView = () => {
 
     switch (page) {
-      case 'main':
-        return <Main />;
+      case 'contact':
+        return <Contact />;
         case 'portfolio':
         return <Portfolio />;
       case 'about':
         return <About />;
       default:
-        return <Contact />
+        return <Main />
     }
   }
 

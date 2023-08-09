@@ -2,7 +2,6 @@ function Contact() {
     return (
         <main>
             <h1>Contact Michael</h1>
-            <p>Welcome To My REACT Portfolio Site!</p>
 
             <form>
                 <input type="text" placeholder="Enter your name" />
