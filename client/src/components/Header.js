@@ -1,20 +1,34 @@
-// Define the Header component
 function Header(propsObj) {
-  console.log(propsObj)
-  // Return JSX for the header section
+  const changePage = (event) => {
+    event.preventDefault();
+
+    const link = event.target;
+    const text = link.innerText;
+
+    switch (text) {
+      case 'About':
+        propsObj.setPage('about');
+        break;
+      case 'Contact':
+        propsObj.setPage('contact');
+        break;
+      default:
+        propsObj.setPage('Main');
+    }
+  }
+
   return (
-    <header>
+    <header className="row justify-between align-center">
       <h3>Logo</h3>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">About Me</a>
-        <a href="#">Contact</a>
-        <a href="#">Resume</a>
-        <h3>{propsObj.name}</h3>
+        <a onClick={changePage} className={propsObj.page === 'Main' ? 'active' : ''} href="/">Home</a>
+        <a onClick={changePage} className={propsObj.page === 'contact' ? 'active' : ''} href="/portfolio">Portfolio</a>
+        <a onClick={changePage} className={propsObj.page === 'about' ? 'active' : ''} href="/about">About</a>
+        <a onClick={changePage} className={propsObj.page === 'contact' ? 'active' : ''} href="/contact">Contact</a>
+
       </nav>
     </header>
   )
 }
 
-// Export the Header component so it can be used in other files
 export default Header;

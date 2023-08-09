@@ -1,34 +1,41 @@
-//Importing Components 
-import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 
+// Component Imports
 import Header from './components/Header';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
 
-//Importing Pages
-import Main from './pages/Main'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Portfolio from './pages/Portfolio'
-
+// Page imports
+import Main from './pages/Main';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Portfolio from './pages/Portfolio';
 
 function App() {
-  const count = 10;
-  const name = 'mr';
+  const [page, setPage] = useState('main');
+
+  const handlePageView = () => {
+
+    switch (page) {
+      case 'main':
+        return <Main />;
+        case 'portfolio':
+        return <Portfolio />;
+      case 'about':
+        return <About />;
+      default:
+        return <Contact />
+    }
+  }
 
   return (
     <>
-      <Header count={count} name={name} />
-      <Routes>
-        {/* CREATING ROUTES  */}
-        <Route path="/" element={<Main/>}/>
-        <Route path="/about" element={<About/>}/>
-      </Routes>
-      <Footer />
+      <Header page={page} setPage={setPage} />
 
+      {handlePageView()}
+
+      <Footer />
     </>
-  )
+  );
 }
 
 export default App;
-
-//use react router to remove Main from other pages Main should only be shown 

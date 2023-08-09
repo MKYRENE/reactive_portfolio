@@ -1,3 +1,12 @@
+$mainColor: #31d98c;
+
+html,
+body,
+#root,
+.dark {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,5 +14,105 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: white;
+  padding: 0;
+}
+
+.row,
+.column {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  padding: 0 4%;
+}
+
+.dark {
+  background: #777;
+  color: #fff;
+
+  nav a {
+    color: #fff;
+  }
+}
+
+header {
+  .toggle-bar {
+    background: #999;
+    height: 25px;
+    width: 70px;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+
+    .toggle {
+      position: absolute;
+      height: 21px;
+      width: 21px;
+      top: 2px;
+      left: 4px;
+      background: #555;
+      border-radius: 50%;
+      transition: left .4s;
+
+      &.dark-mode {
+        left: 45px;
+      }
+    }
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #000;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}
+
+p.confirmation {
+  color: darken($mainColor, 10%);
+}
+
+form {
+  width: 400px;
+  margin: 0 auto;
+
+  >* {
+    padding: 4px 10px;
+    margin-bottom: 4px;
+  }
+
+  button {
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    background: $mainColor;
+    color: #fff;
+    font-size: 1rem;
+  }
+}
+
+h1 {
+  text-align: center;
 }

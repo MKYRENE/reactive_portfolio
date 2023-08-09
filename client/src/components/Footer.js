@@ -4,7 +4,7 @@ function Footer(propsObj) {
   const year = date.getFullYear();
 
   return (
-    <footer>
+    <footer className="row justify-between">
       <p>&copy; {year}</p>
       <p>Dev'd & Build & Design by Michael Rodriguez</p>
     </footer>
