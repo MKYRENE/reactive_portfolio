@@ -21,16 +21,16 @@
   from {
     color: orange;
   }
+
   to {
-    color: rgb(250, 255, 248);
+    color: white;
+
   }
-  from {
-    color: rgb(236, 2, 2);
-  }
+
   to {
     color: rgb(105, 7, 127);
   }
-  
+
 }
 
 
@@ -45,9 +45,6 @@
     transform: scale(1);
   }
 }
-
-
-
 
 /* Apply the animation to elements with specific classes */
 .animated-h1 {
@@ -64,7 +61,6 @@ html,
 body,
 #root,
 .dark {
-  height: 100%;
   margin: 0;
 }
 
@@ -80,7 +76,6 @@ body {
 .intro-text {
   font-weight: bold;
   font-size: 24px;
-  color: rgb(215, 32, 32);
 }
 
 /* Animation for h3 */
@@ -90,7 +85,6 @@ body {
 }
 
 .project-title {
-  color: white;
   text-align: center;
 }
 
@@ -288,7 +282,7 @@ h1 {
 }
 
 .animated-h1 {
-  animation: colorExplosion 3s infinite alternate, zoomIn 2s ease-in-out;
+  animation: colorExplosion 2s infinite alternate, zoomIn 1s ease-in-out;
   font-size: 36px;
   /* Adjust the font size as needed */
 
@@ -339,5 +333,5 @@ h1 {
 .portfolio-title {
   font-family: 'Cherry Bomb One', cursive;
   /* Add any other styling you need */
-  color:red;
+  color: red;
 }
