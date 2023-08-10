@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Orbitron&family=Roboto:wght@100&display=swap');
 
-// Main color
-$mainColor: #31d98c;
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Caprasimo&family=Cherry+Bomb+One&family=Orbitron&family=Roboto:wght@100&display=swap');
 
 // Animation
 @keyframes revealText {
@@ -21,15 +20,17 @@ $mainColor: #31d98c;
 @keyframes colorExplosion {
   from {
     color: orange;
-    color:#31d98c;
-    color:red;
-    color:blue;
-    color:white;
   }
-
   to {
-    color: purple;
+    color: rgb(250, 255, 248);
   }
+  from {
+    color: rgb(236, 2, 2);
+  }
+  to {
+    color: rgb(105, 7, 127);
+  }
+  
 }
 
 
@@ -38,6 +39,7 @@ $mainColor: #31d98c;
     opacity: 0;
     transform: scale(0.5);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -49,7 +51,7 @@ $mainColor: #31d98c;
 
 /* Apply the animation to elements with specific classes */
 .animated-h1 {
-  animation: colorExplosion 2s infinite alternate;
+  animation: colorExplosion 5s infinite alternate;
 }
 
 .animated-h3 {
@@ -71,7 +73,7 @@ body {
   background-size: cover;
   background-position: center;
   margin: 0;
- 
+
 }
 
 /* Animation for h1 */
@@ -85,11 +87,11 @@ body {
 .other-heading {
   font-weight: bold;
   font-size: 20px;
-  color: blue;
 }
 
 .project-title {
   color: white;
+  text-align: center;
 }
 
 .project-description {
@@ -172,11 +174,6 @@ header {
   }
 }
 
-// Form styles
-p.confirmation {
-  color: darken($mainColor, 10%);
-}
-
 form {
   width: 400px;
   margin: 0 auto;
@@ -190,7 +187,6 @@ form {
     border: none;
     padding: 8px 10px;
     cursor: pointer;
-    background: $mainColor;
     color: #fff;
     font-size: 1rem;
     margin-top: 10px;
@@ -292,14 +288,56 @@ h1 {
 }
 
 .animated-h1 {
-  animation: colorExplosion 2s infinite alternate, zoomIn 2s ease-in-out;
-  font-size: 36px; /* Adjust the font size as needed */
+  animation: colorExplosion 3s infinite alternate, zoomIn 2s ease-in-out;
+  font-size: 36px;
+  /* Adjust the font size as needed */
 
 }
+
 .animated-h3 {
-  animation: colorExplosion 4s infinite alternate, zoomIn 4s ease-in-out;
-  font-size: 36px; /* Adjust the font size as needed */
+  animation: colorExplosion 2s infinite alternate, zoomIn 3s ease-in-out;
+  font-size: 36px;
+  /* Adjust the font size as needed */
 
 }
 
+.project-image.smaller-image {
+  max-width: 500px; // Adjust the width as needed
+  max-height: 650px; // Adjust the height as needed
+}
 
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; // Ensures the image container takes full height
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  /* Add margin to adjust spacing */
+}
+
+.github-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #444;
+  }
+}
+
+.portfolio-title {
+  font-family: 'Cherry Bomb One', cursive;
+  /* Add any other styling you need */
+  color:red;
+}

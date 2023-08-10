@@ -1,60 +1,46 @@
+import React from 'react';
+
 function Portfolio() {
     return (
         <main>
-            <h1>Welcome To My REACT Portfolio Site!</h1>
-            <p>Introducing the Pomofocus App your ultimate productivity companion! As the developer behind this innovative tool, I created the Pomofocus App to help you harness the power of the Pomodoro Technique. Say goodbye to distractions and hello to focused work sessions. With Pomofocus, you can break your tasks into manageable intervals, boosting your efficiency and concentration. As a web developer, I combined my passion for coding with a drive for enhancing productivity to bring you this time-tested technique in a modern, user-friendly interface. Explore the Pomofocus App and supercharge your workflow!
+            <h1 className="portfolio-title animated-h1">Project Portfolio</h1>
+
+            <p className="indented-paragraph">
+                {/* ... */}
             </p>
             <section className="projects">
-                <h2>Featured Projects</h2>
 
                 <div className="project-card">
-                    <img
-                        className="project-image"
-                        src="https://raw.githubusercontent.com/MKYRENE/pomo_focus/main/Assets/Page_ScreenShot.png"
-                        alt="Pomofocus App"
-                    />
+                    <div className="image-container">
+                        <img
+                            className="project-image smaller-image"
+                            src="https://raw.githubusercontent.com/MKYRENE/pomo_focus/main/Assets/Page_ScreenShot.png"
+                            alt="Pomofocus App"
+                        />
+                    </div>
 
                     <div className="project-info">
-                        <h3 className="project-title">Pomofocus App</h3>
+
                         <p className="project-description">
-                            A productivity app that uses the Pomodoro Technique to help you manage
-                            your time effectively and boost your focus.
+                            {/* ... */}
                         </p>
-                        <a
-                            href="https://github.com/mkyrene/pomo_focus"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            GitHub Repository
-                        </a>
+                        <div className="button-container">
+                            <a
+                                className="github-button"
+                                href="https://github.com/mkyrene/pomo_focus"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub Repository
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div className="project-card">
-                    <img
-                        className="project-image"
-                        src="https://your-image-url.com/travel-circle-screenshot.jpg"
-                        alt="Travel Circle App"
-                    />
-                    <div className="project-info">
-                        <h3 className="project-title">Travel Circle App</h3>
-                        <p className="project-description">
-                            Plan your next adventure with the Travel Circle app. Discover exciting
-                            destinations, create itineraries, and share your travel experiences.
-                        </p>
-                        <a
-                            href="https://github.com/MKYRENE/travel_circle_app"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            GitHub Repository
-                        </a>
-                    </div>
-                </div>
+                {/* ... Other project cards ... */}
             </section>
-
         </main>
-    )
+    );
 }
 
 export default Portfolio;
