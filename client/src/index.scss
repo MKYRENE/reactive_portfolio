@@ -180,6 +180,14 @@ h1 {
   padding: 20px;
 }
 
+/* Add this CSS to your existing styles */
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Adjust as needed */
+}
+
 // Navigation links
 .nav-links {
   display: flex;
