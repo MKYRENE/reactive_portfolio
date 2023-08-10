@@ -16,6 +16,26 @@ $mainColor: #31d98c;
   }
 }
 
+/* Keyframes animation */
+@keyframes colorExplosion {
+  from {
+    background-color: orange;
+  }
+  to {
+    background-color: purple;
+  }
+}
+
+/* Apply the animation to elements with specific classes */
+.animated-h1 {
+  animation: colorExplosion 2s infinite alternate;
+}
+
+.animated-h3 {
+  animation: colorExplosion 2s infinite alternate;
+}
+
+
 // Global styles
 html, body, #root, .dark {
   height: 100%;
@@ -33,12 +53,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-// Typography
+/* Animation for h1 */
 .intro-text {
   font-weight: bold;
   font-size: 24px;
-  color: white;
-  animation: revealText 1s ease-in-out forwards;
+  color: rgb(215, 32, 32);
+  animation: revealTextH1 1s ease-in-out forwards;
+}
+
+/* Animation for h3 */
+.other-heading {
+  font-weight: bold;
+  font-size: 20px;
+  color: blue; /* Adjust color as needed */
+  animation: revealTextH3 1s ease-in-out forwards;
 }
 
 .project-title {
@@ -206,4 +234,21 @@ h1 {
   width: 100%;
   padding: 4px 10px;
   margin-bottom: 4px;
+}
+
+/* Add this to your SCSS file */
+.indented-paragraph {
+  color: white;
+  margin-left: 2em; /* Adjust the value as needed */
+}
+
+/* Add this to your SCSS file */
+.background-overlay {
+  position: absolute;
+  top: 5;
+  left: 10;
+  width: 83%;
+  height: 38%;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity as needed */
+  z-index: -1;
 }

@@ -13,10 +13,10 @@ function Header(propsObj) {
       <img src={logoImage} alt="Logo" style={{ width: '100px', height: 'auto' }} />
 
       <nav className="nav-links">
-        <NavLink to="/" style={{ color: 'red' }}>Home</NavLink>
-        <NavLink to="/portfolio" style={{ color: 'red' }}>Portfolio</NavLink>
-        <NavLink to="/about" style={{ color: 'red' }}>About</NavLink>
-        <NavLink to="/contact" style={{ color: 'red' }}>Contact</NavLink>
+        <NavLink to="/" style={{ color: 'white' }}>Home</NavLink>
+        <NavLink to="/portfolio" style={{ color: 'white' }}>Portfolio</NavLink>
+        <NavLink to="/about" style={{ color: 'white' }}>About</NavLink>
+        <NavLink to="/contact" style={{ color: 'white' }}>Contact</NavLink>
       </nav>
     </header>
   );
