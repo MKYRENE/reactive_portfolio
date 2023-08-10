@@ -62,6 +62,7 @@ body,
 #root,
 .dark {
   margin: 0;
+  height: 100%;
 }
 
 body {
@@ -260,8 +261,8 @@ h1 {
   position: absolute;
   top: 5;
   left: 10;
-  width: 83%;
-  height: 54%;
+  width: 73%;
+  height: 64%;
   background-color: rgba(0, 0, 0, 0.6);
   /* Adjust the opacity as needed */
   z-index: -1;
@@ -334,4 +335,17 @@ h1 {
   font-family: 'Cherry Bomb One', cursive;
   /* Add any other styling you need */
   color: red;
+}
+
+.linkedin-logo {
+  display: inline-block;
+  width: 20px; // Adjust the width as needed
+  height: 20px; // Adjust the height as needed
+  margin-left: 5px; // Add spacing between text and logo
+  vertical-align: middle;
+  color:green;
+}
+
+.align-center {
+  text-align: center;
 }
