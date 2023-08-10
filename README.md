@@ -1,4 +1,4 @@
-# React Portfolio
+# Techfolio React Site
 
 ![Project Preview](link_to_preview_image.gif)
 
@@ -15,6 +15,9 @@ This project aims to help you create a portfolio using React, showcasing your sk
 - [Projects](#projects)
 - [Design](#design)
 - [Contact](#contact)
+
+## Landing Page
+![Project Preview](link_to_preview_image.gif)
 
 ## User Story
 As an employer looking for candidates with experience building single-page applications, I want to view a potential employee's deployed React portfolio of work samples so that I can assess whether they're a good candidate for an open position.

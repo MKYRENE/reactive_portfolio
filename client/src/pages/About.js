@@ -1,16 +1,14 @@
+import React from 'react';
+import ProfilePic from "../assets/1647801593361.jpg"; // Update the path to your image
 
 function About() {
     return (
         <div className="about-container">
             <div className="background-overlay"></div> {/* Add this */}
             <h1 style={{ color: 'white' }}>About Me</h1>
+            <img src={ProfilePic} alt="Profile" className="profile-image" />
             <p className="indented-paragraph">
-            I am a dedicated and accomplished professional with over 10 years of experience in the financial industry. Recently, I have pivoted my career towards the IT industry, completing a Codecademy course and earning a certificate in HTML. I am excited to apply my new technical skills to create innovative solutions that help businesses grow.
-
-                In my previous roles in banking, I was consistently successful in meeting sales quotas and service goals. As an Associate banker at Wells Fargo, I brought in over $500k in house loan closing and $100k in new money for New Account openings (NAO) and referred $1.5M in investments close leveraging other branch channels. At Santander, I established relationships with personal and business customers, building a strong rapport with clients by facilitating consultation sessions to provide solutions with utmost confidence and clarity, with a heavy focus on small businesses and providing Small Business Lending & Payment solutions.
-
-                I am highly competent in risk management, financial analysis, business analysis, and small business lending. Additionally, my new technical skills will allow me to provide innovative solutions for businesses looking to improve their online presence.
-
+            Passionate and results-driven professional with a background in retail banking and a strong desire to transition into software development. Recently completed an intensive Full Stack Web Development Bootcamp at Rutgers University, mastering key topics such as Computer Science applied to JavaScript, Algorithms, Data Structures, and Responsive Design. Proficient in front-end and back-end technologies, including React.js, Node.js, and Express.js. Committed to delivering seamless user experiences and driving business growth through innovative web solutions.
             </p>
         </div>
     )

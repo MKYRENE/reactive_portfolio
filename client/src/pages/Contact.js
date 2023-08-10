@@ -2,11 +2,9 @@ import About from './About'
 
 function Contact() {
     return (
-
-
         <main>
             <About />
-            <h1>Contact Michael</h1>
+            <h1 style={{ color: 'white' }}>Contact Michael</h1>
             <div>
                 <form>
                     <input type="text" className="input-field" placeholder="Enter your name" />
@@ -15,12 +13,8 @@ function Contact() {
                     <button>Submit</button>
                 </form>
             </div>
-
         </main>
     )
 }
-
-
-
 
 export default Contact;
