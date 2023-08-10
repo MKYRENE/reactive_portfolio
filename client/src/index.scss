@@ -1,25 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Orbitron&family=Roboto:wght@100&display=swap');
+
+// Main color
 $mainColor: #31d98c;
 
-html,
-body,
-#root,
-.dark {
+// Animation
+@keyframes revealText {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    animation-delay: 3s;
+  }
+}
+
+// Global styles
+html, body, #root, .dark {
   height: 100%;
+  margin: 0;
 }
 
 body {
-  background-color: blueviolet;
+  background: blueviolet;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url("./assets/mountain_background.jpeg");
+  background-size: cover;
+  background-position: center;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 0;
 }
 
-.row,
-.column {
+// Typography
+.intro-text {
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  animation: revealText 1s ease-in-out forwards;
+}
+
+.project-title {
+  color: white;
+}
+
+.project-description {
+  font-weight: bold;
+}
+
+// Flexbox utilities
+.row, .column {
   display: flex;
 }
 
@@ -43,6 +74,7 @@ body {
   padding: 0 4%;
 }
 
+// Dark mode
 .dark {
   background: #777;
   color: #fff;
@@ -52,6 +84,7 @@ body {
   }
 }
 
+// Header
 header {
   .toggle-bar {
     background: #999;
@@ -69,7 +102,7 @@ header {
       left: 4px;
       background: #555;
       border-radius: 50%;
-      transition: left .4s;
+      transition: left 0.4s;
 
       &.dark-mode {
         left: 45px;
@@ -91,6 +124,7 @@ header {
   }
 }
 
+// Form styles
 p.confirmation {
   color: darken($mainColor, 10%);
 }
@@ -111,6 +145,7 @@ form {
     background: $mainColor;
     color: #fff;
     font-size: 1rem;
+    margin-top: 10px;
   }
 }
 
@@ -118,18 +153,49 @@ h1 {
   text-align: center;
 }
 
-/* CSS file or inline styles */
+// Footer
 .footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #f8f8f8; /* Set a background color if needed */
+  background-color: #f8f8f8;
   padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+// Centered paragraph
+.centered-paragraph {
   text-align: center;
 }
 
-/* CSS file or inline styles */
-.centered-paragraph {
-  text-align: center;
+// About container
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+// Navigation links
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+// Input container
+.input-container {
+  display: flex;
+  gap: 10px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 4px 10px;
+  margin-bottom: 4px;
 }

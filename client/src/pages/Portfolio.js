@@ -9,12 +9,14 @@ function Portfolio() {
 
                 <div className="project-card">
                     <img
+                        className="project-image"
                         src="https://raw.githubusercontent.com/MKYRENE/pomo_focus/main/Assets/Page_ScreenShot.png"
                         alt="Pomofocus App"
                     />
+
                     <div className="project-info">
-                        <h3>Pomofocus App</h3>
-                        <p>
+                        <h3 className="project-title">Pomofocus App</h3>
+                        <p className="project-description">
                             A productivity app that uses the Pomodoro Technique to help you manage
                             your time effectively and boost your focus.
                         </p>
@@ -30,12 +32,13 @@ function Portfolio() {
 
                 <div className="project-card">
                     <img
+                        className="project-image"
                         src="https://your-image-url.com/travel-circle-screenshot.jpg"
                         alt="Travel Circle App"
                     />
                     <div className="project-info">
-                        <h3>Travel Circle App</h3>
-                        <p>
+                        <h3 className="project-title">Travel Circle App</h3>
+                        <p className="project-description">
                             Plan your next adventure with the Travel Circle app. Discover exciting
                             destinations, create itineraries, and share your travel experiences.
                         </p>

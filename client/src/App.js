@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css'; // Import Bootstrap CSS
 
 // Component Imports
 import Header from './components/Header';
@@ -11,27 +14,17 @@ import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
 
 function App() {
-  const [page, setPage] = useState('main');
-
-  const handlePageView = () => {
-
-    switch (page) {
-      case 'contact':
-        return <Contact />;
-        case 'portfolio':
-        return <Portfolio />;
-      case 'about':
-        return <About />;
-      default:
-        return <Main />
-    }
-  }
-
   return (
     <>
-      <Header page={page} setPage={setPage} />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/portfolio" element={<Portfolio />} />
 
-      {handlePageView()}
+      </Routes>
+
 
       <Footer />
     </>

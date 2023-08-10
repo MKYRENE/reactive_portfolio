@@ -1,37 +1,22 @@
+import { NavLink } from "react-router-dom";
+
 function Header(propsObj) {
-  const changePage = (event) => {
-    event.preventDefault();
-
-    const link = event.target;
-    const text = link.innerText;
-
-    switch (text) {
-      case 'About':
-        propsObj.setPage('about');
-        break;
-      case 'Contact':
-        propsObj.setPage('contact');
-        break;
-        case 'Portfolio':
-        propsObj.setPage('portfolio');
-        break;
-      default:
-        propsObj.setPage('Main');
-    }
-  }
+  const navLinkStyles = {
+    color: 'white',
+    fontWeight: 'bold',
+  };
 
   return (
     <header className="row justify-between align-center">
       <h3>Logo</h3>
-      <nav>
-        <a onClick={changePage} className={propsObj.page === 'Main' ? 'active' : ''} href="/">Home</a>
-        <a onClick={changePage} className={propsObj.page === 'portfolio' ? 'active' : ''} href="/portfolio">Portfolio</a>
-        <a onClick={changePage} className={propsObj.page === 'about' ? 'active' : ''} href="/about">About</a>
-        <a onClick={changePage} className={propsObj.page === 'contact' ? 'active' : ''} href="/contact">Contact</a>
-
+      <nav className="nav-links">
+        <NavLink to="/" style={{ color: 'red' }}>Home</NavLink>
+        <NavLink to="/portfolio" style={{ color: 'red' }}>Portfolio</NavLink>
+        <NavLink to="/about" style={{ color: 'red' }}>About</NavLink>
+        <NavLink to="/contact" style={{ color: 'red' }}>Contact</NavLink>
       </nav>
     </header>
-  )
+  );
 }
 
 export default Header;
